@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wanderlust — Discover the World</title>
+  <meta name="description" content="Discover extraordinary destinations and unforgettable travel experiences with Wanderlust.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+
+<!-- Loader -->
+<div id="loader">
+  <div class="loader-brand">Wander<span>lust</span></div>
+  <div class="loader-bar"><div class="loader-progress"></div></div>
+</div>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Wander<span>lust</span></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" data-page="home" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="destinations" href="destinations.html">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="tours" href="tours.html">Tours</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="gallery" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="about" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="contact" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+        <button class="theme-toggle" aria-label="Toggle theme">
+          <span class="icon-sun">☀</span>
+          <span class="icon-moon">☾</span>
+        </button>
+        <a href="booking.html" class="btn-wl btn-wl-primary d-none d-lg-inline-flex">
+          <i class="fa-solid fa-calendar-check"></i> Book Now
+        </a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-img"></div>
+  <div class="hero-overlay"></div>
+  <div class="container hero-content py-5">
+    <div class="row align-items-center min-vh-100">
+      <div class="col-lg-7 col-xl-6 py-5">
+        <div class="hero-eyebrow mb-3">Your journey starts here</div>
+        <h1 class="hero-title mb-4">
+          <span class="word" style="animation-delay:0.3s">Explore</span>
+          <span class="word" style="animation-delay:0.42s"> the</span>
+          <strong class="word" style="animation-delay:0.54s">World</strong>
+        </h1>
+        <p class="hero-desc mb-5">
+          Curated travel experiences that take you beyond the ordinary. From hidden gems to iconic landmarks — every journey crafted with intention.
+        </p>
+        <div class="d-flex flex-wrap gap-3 mb-5">
+          <a href="destinations.html" class="btn-wl btn-wl-primary">
+            <i class="fa-solid fa-compass"></i> Explore Destinations
+          </a>
+          <a href="tours.html" class="btn-wl btn-wl-outline">
+            <i class="fa-regular fa-map"></i> View Tours
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <span class="hero-stat-num">200<span style="font-size:1.2rem">+</span></span>
+            <span class="hero-stat-label">Destinations</span>
+          </div>
+          <div>
+            <span class="hero-stat-num">50K<span style="font-size:1.2rem">+</span></span>
+            <span class="hero-stat-label">Happy Travelers</span>
+          </div>
+          <div>
+            <span class="hero-stat-num">15<span style="font-size:1.2rem">yr</span></span>
+            <span class="hero-stat-label">Experience</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    Scroll
+  </div>
+</section>
+
+<!-- Search Bar -->
+<section class="py-5" style="background:var(--bg)">
+  <div class="container">
+    <div class="search-bar reveal">
+      <div class="row g-3 align-items-end">
+        <div class="col-md-3">
+          <label>Destination</label>
+          <input type="text" class="form-control" placeholder="Where to?">
+        </div>
+        <div class="col-md-2">
+          <label>Check In</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-md-2">
+          <label>Check Out</label>
+          <input type="date" class="form-control">
+        </div>
+        <div class="col-md-2">
+          <label>Travelers</label>
+          <select class="form-select">
+            <option>1 Person</option>
+            <option>2 People</option>
+            <option>3-5 People</option>
+            <option>6+ People</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <a href="destinations.html" class="btn-wl btn-wl-primary w-100 justify-content-center">
+            <i class="fa-solid fa-magnifying-glass"></i> Search
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Featured Destinations -->
+<section class="section-padding" id="destinations">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-6 reveal">
+        <div class="section-label mb-2">Top Picks</div>
+        <h2 class="section-title mb-3">Destinations That<br><em>Inspire</em></h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Handpicked destinations loved by thousands of travelers. Each experience is unique, authentic, and unforgettable.</p>
+      </div>
+      <div class="col-lg-6 d-flex align-items-end justify-content-lg-end reveal delay-2">
+        <a href="destinations.html" class="btn-wl btn-wl-outline-dark">
+          View All Destinations <i class="fa-solid fa-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+
+    <div class="row g-4">
+      <!-- Featured big card -->
+      <div class="col-lg-5 reveal delay-1">
+        <a href="destinations.html" class="text-decoration-none">
+          <div class="featured-dest">
+            <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=900&q=80" alt="Kyoto">
+            <div class="featured-overlay"></div>
+            <div class="featured-content">
+              <div class="section-label mb-1" style="color:var(--accent)">Japan</div>
+              <div class="featured-title">Kyoto</div>
+              <p style="color:rgba(255,255,255,0.75); font-size:0.9rem; margin-top:0.5rem">Ancient temples, blooming cherry trees, and timeless traditions.</p>
+              <div class="d-flex align-items-center justify-content-between mt-2">
+                <span style="color:rgba(255,255,255,0.9);font-family:var(--font-display);font-size:1.6rem;font-weight:700">From $1,290</span>
+                <span class="rating-stars">★★★★★</span>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Small cards -->
+      <div class="col-lg-7">
+        <div class="row g-4">
+          <div class="col-sm-6 reveal delay-2">
+            <a href="destinations.html" class="text-decoration-none">
+              <div class="dest-card h-100">
+                <div class="dest-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80" class="dest-card-img" alt="Rome">
+                  <div class="dest-badge">Popular</div>
+                </div>
+                <div class="dest-card-body">
+                  <div class="dest-country">Italy</div>
+                  <div class="dest-name">Rome</div>
+                  <p class="dest-desc">The Eternal City where history breathes on every cobblestone.</p>
+                  <div class="dest-meta">
+                    <div class="dest-price">$980<small>per person</small></div>
+                    <div class="rating-stars">★★★★★</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 reveal delay-3">
+            <a href="destinations.html" class="text-decoration-none">
+              <div class="dest-card h-100">
+                <div class="dest-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" class="dest-card-img" alt="Dubai">
+                  <div class="dest-badge">New</div>
+                </div>
+                <div class="dest-card-body">
+                  <div class="dest-country">UAE</div>
+                  <div class="dest-name">Dubai</div>
+                  <p class="dest-desc">Futuristic skylines meeting ancient desert landscapes.</p>
+                  <div class="dest-meta">
+                    <div class="dest-price">$1,150<small>per person</small></div>
+                    <div class="rating-stars">★★★★½</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 reveal delay-2">
+            <a href="destinations.html" class="text-decoration-none">
+              <div class="dest-card h-100">
+                <div class="dest-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80" class="dest-card-img" alt="Bali">
+                </div>
+                <div class="dest-card-body">
+                  <div class="dest-country">Indonesia</div>
+                  <div class="dest-name">Bali</div>
+                  <p class="dest-desc">Lush rice terraces, spiritual temples, and golden beaches.</p>
+                  <div class="dest-meta">
+                    <div class="dest-price">$750<small>per person</small></div>
+                    <div class="rating-stars">★★★★★</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-sm-6 reveal delay-3">
+            <a href="destinations.html" class="text-decoration-none">
+              <div class="dest-card h-100">
+                <div class="dest-card-img-wrap">
+                  <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=600&q=80" class="dest-card-img" alt="Santorini">
+                  <div class="dest-badge">Trending</div>
+                </div>
+                <div class="dest-card-body">
+                  <div class="dest-country">Greece</div>
+                  <div class="dest-name">Santorini</div>
+                  <p class="dest-desc">Iconic white-washed cliffs above the azure Aegean Sea.</p>
+                  <div class="dest-meta">
+                    <div class="dest-price">$1,080<small>per person</small></div>
+                    <div class="rating-stars">★★★★★</div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="section-padding why-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label mb-2">Why Us</div>
+      <h2 class="section-title mb-3">Travel <em>Crafted</em> for You</h2>
+      <div class="divider mx-auto"></div>
+      <p class="section-subtitle mx-auto">We believe travel should be effortless, immersive, and deeply personal.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-3 reveal delay-1">
+        <div class="feature-card">
+          <div class="feature-icon">✈</div>
+          <h4 class="feature-title">Expert Curation</h4>
+          <p class="feature-desc">Every itinerary is handcrafted by our seasoned travel experts who've explored each destination personally.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal delay-2">
+        <div class="feature-card">
+          <div class="feature-icon">🛡</div>
+          <h4 class="feature-title">Safe Travel</h4>
+          <p class="feature-desc">24/7 support, comprehensive travel insurance, and real-time safety monitoring for your peace of mind.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal delay-3">
+        <div class="feature-card">
+          <div class="feature-icon">💎</div>
+          <h4 class="feature-title">Best Value</h4>
+          <p class="feature-desc">Premium experiences at competitive prices. Our price match guarantee ensures you always get the best deal.</p>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 reveal delay-4">
+        <div class="feature-card">
+          <div class="feature-icon">🌍</div>
+          <h4 class="feature-title">Sustainable</h4>
+          <p class="feature-desc">We partner with eco-conscious providers to minimize footprint and support local communities worldwide.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Stats Counter -->
+<section class="section-padding" style="background:var(--bg)">
+  <div class="container">
+    <div class="row g-0 reveal">
+      <div class="col-6 col-md-3">
+        <div class="stat-card border-end" style="border-color:var(--border)!important">
+          <div class="stat-num" data-count="200" data-suffix="+">0</div>
+          <div class="stat-label">Destinations</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card border-end d-none d-md-block" style="border-color:var(--border)!important">
+          <div class="stat-num" data-count="50000" data-suffix="+">0</div>
+          <div class="stat-label">Happy Travelers</div>
+        </div>
+        <div class="stat-card d-md-none">
+          <div class="stat-num" data-count="50000" data-suffix="+">0</div>
+          <div class="stat-label">Happy Travelers</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card border-end" style="border-color:var(--border)!important">
+          <div class="stat-num" data-count="98" data-suffix="%">0</div>
+          <div class="stat-label">Satisfaction Rate</div>
+        </div>
+      </div>
+      <div class="col-6 col-md-3">
+        <div class="stat-card">
+          <div class="stat-num" data-count="15" data-suffix="yr">0</div>
+          <div class="stat-label">Of Experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tours Preview -->
+<section class="section-padding" style="background:var(--bg-secondary)">
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-lg-6 reveal">
+        <div class="section-label mb-2">Curated Experiences</div>
+        <h2 class="section-title mb-3">Featured <em>Tours</em></h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Guided adventures with everything planned — all you do is show up.</p>
+      </div>
+      <div class="col-lg-6 d-flex align-items-end justify-content-lg-end reveal delay-2">
+        <a href="tours.html" class="btn-wl btn-wl-outline-dark">
+          Browse All Tours <i class="fa-solid fa-arrow-right ms-1"></i>
+        </a>
+      </div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal delay-1">
+        <div class="tour-card">
+          <img src="https://images.unsplash.com/photo-1500049242364-5f500807cdd7?w=600&q=80" class="tour-img" alt="Alps Tour">
+          <div class="tour-body">
+            <div class="tour-tags"><span class="tour-tag">Adventure</span><span class="tour-tag">Nature</span></div>
+            <h4 class="tour-name">Swiss Alps Explorer</h4>
+            <p class="dest-desc">Trek through breathtaking alpine meadows, glaciers, and charming mountain villages.</p>
+            <div class="tour-details">
+              <div class="tour-detail-item"><i class="fa-regular fa-clock"></i> 8 Days</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-users"></i> Max 12</div>
+              <div class="tour-detail-item"><i class="fa-regular fa-calendar"></i> Year-round</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-signal"></i> Moderate</div>
+            </div>
+            <div class="tour-footer">
+              <div class="dest-price">$2,490<small>per person</small></div>
+              <a href="booking.html" class="btn-wl btn-wl-primary" style="padding:0.55rem 1.1rem;font-size:0.82rem">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal delay-2">
+        <div class="tour-card">
+          <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=80" class="tour-img" alt="Japan Tour">
+          <div class="tour-body">
+            <div class="tour-tags"><span class="tour-tag">Culture</span><span class="tour-tag">History</span></div>
+            <h4 class="tour-name">Japan Cultural Journey</h4>
+            <p class="dest-desc">From Tokyo's neon lights to Kyoto's ancient temples — experience Japan's full tapestry.</p>
+            <div class="tour-details">
+              <div class="tour-detail-item"><i class="fa-regular fa-clock"></i> 12 Days</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-users"></i> Max 16</div>
+              <div class="tour-detail-item"><i class="fa-regular fa-calendar"></i> Mar–Nov</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-signal"></i> Easy</div>
+            </div>
+            <div class="tour-footer">
+              <div class="dest-price">$3,890<small>per person</small></div>
+              <a href="booking.html" class="btn-wl btn-wl-primary" style="padding:0.55rem 1.1rem;font-size:0.82rem">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal delay-3">
+        <div class="tour-card">
+          <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80" class="tour-img" alt="Maldives Tour">
+          <div class="tour-body">
+            <div class="tour-tags"><span class="tour-tag">Luxury</span><span class="tour-tag">Beach</span></div>
+            <h4 class="tour-name">Maldives Escape</h4>
+            <p class="dest-desc">Overwater bungalows, crystal lagoons, and world-class diving in paradise.</p>
+            <div class="tour-details">
+              <div class="tour-detail-item"><i class="fa-regular fa-clock"></i> 7 Days</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-users"></i> Max 8</div>
+              <div class="tour-detail-item"><i class="fa-regular fa-calendar"></i> Nov–Apr</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-signal"></i> Easy</div>
+            </div>
+            <div class="tour-footer">
+              <div class="dest-price">$4,200<small>per person</small></div>
+              <a href="booking.html" class="btn-wl btn-wl-primary" style="padding:0.55rem 1.1rem;font-size:0.82rem">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section class="section-padding testimonials-section">
+  <div class="container">
+    <div class="text-center mb-5 reveal">
+      <div class="section-label mb-2">Traveler Stories</div>
+      <h2 class="section-title mb-3">What Our <em>Guests</em> Say</h2>
+      <div class="divider mx-auto"></div>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-6 col-lg-4 reveal delay-1">
+        <div class="testimonial-card">
+          <p class="testimonial-text">Wanderlust turned my dream Japan trip into the most magical two weeks of my life. Every detail was perfect.</p>
+          <div class="d-flex align-items-center gap-3">
+            <img src="https://i.pravatar.cc/100?img=47" class="testimonial-avatar" alt="Sarah">
+            <div>
+              <div class="testimonial-name">Sarah Mitchell</div>
+              <div class="testimonial-role">Traveled to Japan, 2024</div>
+            </div>
+            <div class="ms-auto rating-stars" style="font-size:0.7rem">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal delay-2">
+        <div class="testimonial-card">
+          <p class="testimonial-text">The Swiss Alps tour exceeded every expectation. The guides were knowledgeable and truly passionate about the mountains.</p>
+          <div class="d-flex align-items-center gap-3">
+            <img src="https://i.pravatar.cc/100?img=12" class="testimonial-avatar" alt="Marco">
+            <div>
+              <div class="testimonial-name">Marco Bianchi</div>
+              <div class="testimonial-role">Traveled to Switzerland, 2024</div>
+            </div>
+            <div class="ms-auto rating-stars" style="font-size:0.7rem">★★★★★</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-4 reveal delay-3">
+        <div class="testimonial-card">
+          <p class="testimonial-text">Booking was seamless, the Maldives resort was paradise, and the team was responsive throughout. Will book again!</p>
+          <div class="d-flex align-items-center gap-3">
+            <img src="https://i.pravatar.cc/100?img=32" class="testimonial-avatar" alt="Priya">
+            <div>
+              <div class="testimonial-name">Priya Sharma</div>
+              <div class="testimonial-role">Traveled to Maldives, 2025</div>
+            </div>
+            <div class="ms-auto rating-stars" style="font-size:0.7rem">★★★★★</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="section-padding newsletter-section">
+  <div class="container">
+    <div class="row justify-content-center text-center reveal">
+      <div class="col-lg-7">
+        <div class="section-label mb-3" style="color:var(--accent)">Stay Inspired</div>
+        <h2 class="section-title mb-3" style="color:#f0ebe3">Get Travel Deals &<br><em>Destination Guides</em></h2>
+        <p style="color:rgba(240,235,227,0.65); margin-bottom:2.5rem">Join 40,000+ travelers who receive exclusive deals and hand-curated destination guides every week.</p>
+        <form class="newsletter-form d-flex flex-wrap gap-3 justify-content-center" novalidate>
+          <input type="email" class="newsletter-input" placeholder="Enter your email address">
+          <button type="submit" class="btn-wl btn-wl-primary">
+            <i class="fa-solid fa-paper-plane"></i> Subscribe
+          </button>
+        </form>
+        <p style="color:rgba(240,235,227,0.35); font-size:0.78rem; margin-top:1rem">No spam. Unsubscribe anytime.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand mb-3">Wander<span>lust</span></div>
+        <p class="footer-desc">Crafting extraordinary journeys for curious souls since 2010. Your world awaits.</p>
+        <div class="social-links mt-4">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-pinterest-p"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="destinations.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Destinations</a></li>
+          <li><a href="tours.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Tours</a></li>
+          <li><a href="gallery.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Gallery</a></li>
+          <li><a href="booking.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Book a Trip</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right fa-xs"></i> About Us</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right fa-xs"></i> Careers</a></li>
+          <li><a href="#"><i class="fa-solid fa-chevron-right fa-xs"></i> Press</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fa-solid fa-location-dot text-accent"></i> 42 Explorer Lane, NY 10001</a></li>
+          <li><a href="tel:+1234567890"><i class="fa-solid fa-phone text-accent"></i> +1 (234) 567-890</a></li>
+          <li><a href="mailto:hello@wanderlust.co"><i class="fa-solid fa-envelope text-accent"></i> hello@wanderlust.co</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Wanderlust Travel Co. All rights reserved.</p>
+      <div class="d-flex gap-3">
+        <a href="#" style="font-size:0.82rem; color:var(--text-muted)">Privacy Policy</a>
+        <a href="#" style="font-size:0.82rem; color:var(--text-muted)">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Sticky CTA -->
+<a href="booking.html" class="sticky-cta btn-wl btn-wl-primary">
+  <i class="fa-solid fa-calendar-check"></i> Book a Trip
+</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

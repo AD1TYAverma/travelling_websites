@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Booking — Wanderlust</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body data-page="booking">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Wander<span>lust</span></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" data-page="home" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="destinations" href="destinations.html">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="tours" href="tours.html">Tours</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="gallery" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="about" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="contact" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+        <button class="theme-toggle" aria-label="Toggle theme"><span class="icon-sun">☀</span><span class="icon-moon">☾</span></button>
+        <a href="booking.html" class="btn-wl btn-wl-primary d-none d-lg-inline-flex"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="page-hero">
+
+    <div class="container text-center">
+
+        <div class="section-label">
+            Reserve Your Journey
+        </div>
+
+        <h1 class="page-title">
+            Book Your <em>Dream Trip</em>
+        </h1>
+
+        <p class="page-subtitle">
+            Fill out the form below and our travel experts
+            will contact you with the perfect itinerary.
+        </p>
+
+    </div>
+
+</section>
+
+<!-- Booking Form -->
+<section class="section-padding">
+
+<div class="container">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-10">
+
+<div class="booking-card">
+
+<form id="bookingForm">
+
+<div class="row g-4">
+
+<!-- Personal Details -->
+
+<div class="col-12">
+<h3 class="booking-title">
+Personal Information
+</h3>
+</div>
+
+<div class="col-md-6">
+
+<label class="form-label">
+Full Name
+</label>
+
+<input
+type="text"
+class="form-control"
+required>
+
+</div>
+
+<div class="col-md-6">
+
+<label class="form-label">
+Email Address
+</label>
+
+<input
+type="email"
+class="form-control"
+required>
+
+</div>
+
+<div class="col-md-6">
+
+<label class="form-label">
+Phone Number
+</label>
+
+<input
+type="tel"
+class="form-control"
+required>
+
+</div>
+
+<div class="col-md-6">
+
+<label class="form-label">
+Country
+</label>
+
+<input
+type="text"
+class="form-control">
+
+</div>
+
+<!-- Trip Details -->
+
+<div class="col-12 mt-4">
+<h3 class="booking-title">
+Trip Details
+</h3>
+</div>
+
+<div class="col-md-6">
+
+<label class="form-label">
+Destination
+</label>
+
+<select class="form-select">
+
+<option>Choose Destination</option>
+
+<option>Paris</option>
+<option>Dubai</option>
+<option>Bali</option>
+<option>Maldives</option>
+<option>Switzerland</option>
+<option>Thailand</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6">
+
+<label class="form-label">
+Package Type
+</label>
+
+<select class="form-select">
+
+<option>Standard Package</option>
+<option>Premium Package</option>
+<option>Luxury Package</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6">
+
+<label class="form-label">
+Departure Date
+</label>
+
+<input
+type="date"
+class="form-control">
+
+</div>
+
+<div class="col-md-6">
+
+<label class="form-label">
+Return Date
+</label>
+
+<input
+type="date"
+class="form-control">
+
+</div>
+
+<div class="col-md-6">
+
+<label class="form-label">
+Adults
+</label>
+
+<input
+type="number"
+class="form-control"
+min="1"
+value="1">
+
+</div>
+
+<div class="col-md-6">
+
+<label class="form-label">
+Children
+</label>
+
+<input
+type="number"
+class="form-control"
+min="0"
+value="0">
+
+</div>
+
+<!-- Accommodation -->
+
+<div class="col-12 mt-4">
+<h3 class="booking-title">
+Accommodation Preferences
+</h3>
+</div>
+
+<div class="col-md-4">
+
+<div class="form-check">
+
+<input
+class="form-check-input"
+type="radio"
+name="hotel">
+
+<label class="form-check-label">
+3 Star Hotel
+</label>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="form-check">
+
+<input
+class="form-check-input"
+type="radio"
+name="hotel">
+
+<label class="form-check-label">
+4 Star Hotel
+</label>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="form-check">
+
+<input
+class="form-check-input"
+type="radio"
+name="hotel">
+
+<label class="form-check-label">
+5 Star Hotel
+</label>
+
+</div>
+
+</div>
+
+<!-- Special Requests -->
+
+<div class="col-12 mt-4">
+
+<label class="form-label">
+Special Requests
+</label>
+
+<textarea
+class="form-control"
+rows="5"
+placeholder="Any special requirements?">
+</textarea>
+
+</div>
+
+<div class="col-12 mt-4 text-center">
+
+<button
+type="submit"
+class="btn-wl btn-wl-primary">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Confirm Booking
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Why Book With Us -->
+
+<section class="section-padding bg-light-subtle">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<div class="section-label">
+Benefits
+</div>
+
+<h2 class="section-title">
+Why Book With <em>Wanderlust</em>
+</h2>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+✈
+</div>
+
+<h4>
+Expert Planning
+</h4>
+
+<p>
+Custom itineraries designed by travel experts.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🛡
+</div>
+
+<h4>
+Secure Booking
+</h4>
+
+<p>
+Safe and secure payment process.
+</p>
+
+</div>
+
+</div>
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<div class="feature-icon">
+🌍
+</div>
+
+<h4>
+24/7 Support
+</h4>
+
+<p>
+Assistance before, during and after travel.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- Footer -->
+
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand mb-3">Wander<span>lust</span></div>
+        <p class="footer-desc">Crafting extraordinary journeys for curious souls since 2010.</p>
+        <div class="social-links mt-4">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="destinations.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Destinations</a></li>
+          <li><a href="tours.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Tours</a></li>
+          <li><a href="booking.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Book a Trip</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right fa-xs"></i> About Us</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fa-solid fa-location-dot text-accent"></i> 42 Explorer Lane, NY 10001</a></li>
+          <li><a href="mailto:hello@wanderlust.co"><i class="fa-solid fa-envelope text-accent"></i> hello@wanderlust.co</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Wanderlust Travel Co. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<a href="booking.html" class="sticky-cta btn-wl btn-wl-primary"><i class="fa-solid fa-calendar-check"></i> Book a Trip</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+
+document
+.getElementById("bookingForm")
+.addEventListener("submit",function(e){
+
+e.preventDefault();
+
+alert(
+"Thank you! Your booking request has been submitted successfully."
+);
+
+this.reset();
+
+});
+
+</script>
+
+</body>
+</html>

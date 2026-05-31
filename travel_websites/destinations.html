@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Destinations — Wanderlust</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="destinations">
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Wander<span>lust</span></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" data-page="home" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="destinations" href="destinations.html">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="tours" href="tours.html">Tours</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="gallery" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="about" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="contact" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+        <button class="theme-toggle" aria-label="Toggle theme"><span class="icon-sun">☀</span><span class="icon-moon">☾</span></button>
+        <a href="booking.html" class="btn-wl btn-wl-primary d-none d-lg-inline-flex"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Page Hero -->
+<section class="page-hero" style="background: linear-gradient(135deg,#1a0e06,#3d2210); padding-top:9rem; padding-bottom:5rem;">
+  <div class="about-hero-img" style="background:url('https://images.unsplash.com/photo-1488085061387-422e29b40080?w=1600&q=70') center/cover; opacity:0.25;"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="breadcrumb-wl mb-4">
+      <a href="index.html">Home</a>
+      <span>/</span>
+      <span class="current">Destinations</span>
+    </div>
+    <h1 class="section-title mb-3" style="color:#f0ebe3; font-size:clamp(2.5rem,6vw,4.5rem)">Explore the <em>World</em></h1>
+    <p style="color:rgba(240,235,227,0.7); max-width:540px; font-size:1.05rem">200+ destinations across 6 continents. Find your next adventure.</p>
+  </div>
+</section>
+
+<!-- Filters -->
+<section class="py-4" style="background:var(--bg); border-bottom: 1px solid var(--border); position:sticky; top:72px; z-index:100;">
+  <div class="container">
+    <div class="d-flex flex-wrap gap-2 align-items-center" data-filter-group>
+      <span style="font-size:0.8rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-right:0.5rem;">Filter:</span>
+      <button class="filter-pill active" data-filter="all">All</button>
+      <button class="filter-pill" data-filter="asia">Asia</button>
+      <button class="filter-pill" data-filter="europe">Europe</button>
+      <button class="filter-pill" data-filter="americas">Americas</button>
+      <button class="filter-pill" data-filter="africa">Africa</button>
+      <button class="filter-pill" data-filter="oceania">Oceania</button>
+      <button class="filter-pill" data-filter="middleeast">Middle East</button>
+    </div>
+  </div>
+</section>
+
+<!-- Destinations Grid -->
+<section class="section-padding" style="background:var(--bg)">
+  <div class="container">
+    <div class="row g-4" id="destGrid">
+
+      <div class="col-md-6 col-lg-4 reveal delay-1">
+        <a href="booking.html" class="text-decoration-none">
+          <div class="dest-card" data-category="asia">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=700&q=80" class="dest-card-img" alt="Kyoto">
+              <div class="dest-badge">Popular</div>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-country">Japan</div>
+              <div class="dest-name">Kyoto</div>
+              <p class="dest-desc">Ancient temples, blooming cherry trees, and timeless traditions await in this spiritual heart of Japan.</p>
+              <div class="dest-meta">
+                <div class="dest-price">$1,290<small>per person</small></div>
+                <div class="rating-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-2">
+        <a href="booking.html" class="text-decoration-none">
+          <div class="dest-card" data-category="europe">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=700&q=80" class="dest-card-img" alt="Rome">
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-country">Italy</div>
+              <div class="dest-name">Rome</div>
+              <p class="dest-desc">The Eternal City where history breathes on every cobblestone and pasta reigns supreme.</p>
+              <div class="dest-meta">
+                <div class="dest-price">$980<small>per person</small></div>
+                <div class="rating-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-3">
+        <a href="booking.html" class="text-decoration-none">
+          <div class="dest-card" data-category="middleeast">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=700&q=80" class="dest-card-img" alt="Dubai">
+              <div class="dest-badge">New</div>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-country">UAE</div>
+              <div class="dest-name">Dubai</div>
+              <p class="dest-desc">Futuristic skylines meeting ancient desert landscapes, world-class shopping and dining.</p>
+              <div class="dest-meta">
+                <div class="dest-price">$1,150<small>per person</small></div>
+                <div class="rating-stars">★★★★½</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-1">
+        <a href="booking.html" class="text-decoration-none">
+          <div class="dest-card" data-category="asia">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=700&q=80" class="dest-card-img" alt="Bali">
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-country">Indonesia</div>
+              <div class="dest-name">Bali</div>
+              <p class="dest-desc">Lush rice terraces, spiritual temples, golden beaches and vibrant arts culture.</p>
+              <div class="dest-meta">
+                <div class="dest-price">$750<small>per person</small></div>
+                <div class="rating-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-2">
+        <a href="booking.html" class="text-decoration-none">
+          <div class="dest-card" data-category="europe">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=700&q=80" class="dest-card-img" alt="Santorini">
+              <div class="dest-badge">Trending</div>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-country">Greece</div>
+              <div class="dest-name">Santorini</div>
+              <p class="dest-desc">Iconic white-washed cliffs above the azure Aegean Sea, sunsets that redefine beauty.</p>
+              <div class="dest-meta">
+                <div class="dest-price">$1,080<small>per person</small></div>
+                <div class="rating-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-3">
+        <a href="booking.html" class="text-decoration-none">
+          <div class="dest-card" data-category="americas">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=80" class="dest-card-img" alt="Patagonia">
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-country">Argentina & Chile</div>
+              <div class="dest-name">Patagonia</div>
+              <p class="dest-desc">End-of-the-world wilderness with glaciers, peaks, and the ultimate adventure.</p>
+              <div class="dest-meta">
+                <div class="dest-price">$2,100<small>per person</small></div>
+                <div class="rating-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-1">
+        <a href="booking.html" class="text-decoration-none">
+          <div class="dest-card" data-category="africa">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" class="dest-card-img" alt="Safari">
+              <div class="dest-badge">Must See</div>
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-country">Kenya</div>
+              <div class="dest-name">Maasai Mara</div>
+              <p class="dest-desc">Witness the Great Migration across sweeping golden plains teeming with wildlife.</p>
+              <div class="dest-meta">
+                <div class="dest-price">$3,200<small>per person</small></div>
+                <div class="rating-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-2">
+        <a href="booking.html" class="text-decoration-none">
+          <div class="dest-card" data-category="oceania">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=700&q=80" class="dest-card-img" alt="New Zealand">
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-country">New Zealand</div>
+              <div class="dest-name">South Island</div>
+              <p class="dest-desc">Fjords, mountains, and landscapes straight out of a fantasy film — pure natural splendour.</p>
+              <div class="dest-meta">
+                <div class="dest-price">$1,850<small>per person</small></div>
+                <div class="rating-stars">★★★★★</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-3">
+        <a href="booking.html" class="text-decoration-none">
+          <div class="dest-card" data-category="americas">
+            <div class="dest-card-img-wrap">
+              <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=700&q=80" class="dest-card-img" alt="Rio">
+            </div>
+            <div class="dest-card-body">
+              <div class="dest-country">Brazil</div>
+              <div class="dest-name">Rio de Janeiro</div>
+              <p class="dest-desc">Carnival energy, Copacabana beaches, and Christ the Redeemer watching over it all.</p>
+              <div class="dest-meta">
+                <div class="dest-price">$1,300<small>per person</small></div>
+                <div class="rating-stars">★★★★½</div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter -->
+<section class="section-padding newsletter-section">
+  <div class="container">
+    <div class="row justify-content-center text-center reveal">
+      <div class="col-lg-6">
+        <h2 class="section-title mb-3" style="color:#f0ebe3">Never Miss a <em>Deal</em></h2>
+        <p style="color:rgba(240,235,227,0.65); margin-bottom:2rem">Get exclusive discounts on destinations delivered to your inbox.</p>
+        <form class="newsletter-form d-flex flex-wrap gap-3 justify-content-center" novalidate>
+          <input type="email" class="newsletter-input" placeholder="Your email address">
+          <button type="submit" class="btn-wl btn-wl-primary"><i class="fa-solid fa-paper-plane"></i> Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand mb-3">Wander<span>lust</span></div>
+        <p class="footer-desc">Crafting extraordinary journeys for curious souls since 2010.</p>
+        <div class="social-links mt-4">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="destinations.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Destinations</a></li>
+          <li><a href="tours.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Tours</a></li>
+          <li><a href="gallery.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Gallery</a></li>
+          <li><a href="booking.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Book a Trip</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right fa-xs"></i> About Us</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fa-solid fa-location-dot text-accent"></i> 42 Explorer Lane, NY 10001</a></li>
+          <li><a href="tel:+1234567890"><i class="fa-solid fa-phone text-accent"></i> +1 (234) 567-890</a></li>
+          <li><a href="mailto:hello@wanderlust.co"><i class="fa-solid fa-envelope text-accent"></i> hello@wanderlust.co</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Wanderlust Travel Co. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<a href="booking.html" class="sticky-cta btn-wl btn-wl-primary"><i class="fa-solid fa-calendar-check"></i> Book a Trip</a>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

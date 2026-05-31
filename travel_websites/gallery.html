@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — Wanderlust</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .masonry-grid {
+      columns: 3;
+      column-gap: 1rem;
+    }
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 1rem;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      cursor: pointer;
+    }
+    .masonry-item img { width: 100%; display: block; transition: transform 0.5s ease; }
+    .masonry-item:hover img { transform: scale(1.05); }
+    .masonry-item .gallery-overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0);
+      transition: background 0.35s;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .masonry-item:hover .gallery-overlay { background: rgba(0,0,0,0.3); }
+    .masonry-item .gallery-icon { opacity: 0; transition: opacity 0.35s; color: #fff; font-size: 1.8rem; }
+    .masonry-item:hover .gallery-icon { opacity: 1; }
+    @media (max-width: 768px) { .masonry-grid { columns: 2; } }
+    @media (max-width: 480px) { .masonry-grid { columns: 1; } }
+  </style>
+</head>
+<body data-page="gallery">
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Wander<span>lust</span></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" data-page="home" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="destinations" href="destinations.html">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="tours" href="tours.html">Tours</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="gallery" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="about" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="contact" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+        <button class="theme-toggle" aria-label="Toggle theme"><span class="icon-sun">☀</span><span class="icon-moon">☾</span></button>
+        <a href="booking.html" class="btn-wl btn-wl-primary d-none d-lg-inline-flex"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero" style="background:linear-gradient(135deg,#0a0a0a,#1a1a2e); padding-top:9rem; padding-bottom:5rem;">
+  <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=70') center/cover; opacity:0.15;"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="breadcrumb-wl mb-4">
+      <a href="index.html">Home</a><span>/</span><span class="current">Gallery</span>
+    </div>
+    <h1 class="section-title mb-3" style="color:#f0ebe3; font-size:clamp(2.5rem,6vw,4.5rem)">Travel <em>Gallery</em></h1>
+    <p style="color:rgba(240,235,227,0.7); max-width:540px; font-size:1.05rem">A visual journey through the world's most extraordinary places.</p>
+  </div>
+</section>
+
+<!-- Filter -->
+<section class="py-4" style="background:var(--bg); border-bottom:1px solid var(--border); position:sticky; top:72px; z-index:100;">
+  <div class="container">
+    <div class="d-flex flex-wrap gap-2" data-filter-group>
+      <button class="filter-pill active">All</button>
+      <button class="filter-pill">Asia</button>
+      <button class="filter-pill">Europe</button>
+      <button class="filter-pill">Africa</button>
+      <button class="filter-pill">Americas</button>
+      <button class="filter-pill">Nature</button>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" style="background:var(--bg)">
+  <div class="container">
+    <div class="masonry-grid" id="galleryGrid">
+
+      <div class="masonry-item gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?w=600&q=80" alt="Kyoto Temple">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal delay-1">
+        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Mountain Lake">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal delay-2">
+        <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=600&q=80" alt="Safari">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1531572753322-ad063cecc140?w=600&q=80" alt="Santorini">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal delay-1">
+        <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600&q=80" alt="Patagonia">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal delay-2">
+        <img src="https://images.unsplash.com/photo-1552832230-c0197dd311b5?w=600&q=80" alt="Rome Colosseum">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=600&q=80" alt="Bali Rice Terraces">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal delay-1">
+        <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=600&q=80" alt="Maldives">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal delay-2">
+        <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=600&q=80" alt="Japan Street">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=600&q=80" alt="Forest Light">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal delay-1">
+        <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?w=600&q=80" alt="Rio">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal delay-2">
+        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=600&q=80" alt="India Temple">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal">
+        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=600&q=80" alt="Dubai Skyline">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal delay-1">
+        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?w=600&q=80" alt="Tropical Beach">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+      <div class="masonry-item gallery-item reveal delay-2">
+        <img src="https://images.unsplash.com/photo-1500049242364-5f500807cdd7?w=600&q=80" alt="Alpine Meadow">
+        <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus gallery-icon"></i></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" aria-label="Close"><i class="fa-solid fa-xmark"></i></button>
+  <img src="" alt="Gallery image">
+</div>
+
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand mb-3">Wander<span>lust</span></div>
+        <p class="footer-desc">Crafting extraordinary journeys for curious souls since 2010.</p>
+        <div class="social-links mt-4">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="destinations.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Destinations</a></li>
+          <li><a href="tours.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Tours</a></li>
+          <li><a href="booking.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Book a Trip</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right fa-xs"></i> About Us</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fa-solid fa-location-dot text-accent"></i> 42 Explorer Lane, NY 10001</a></li>
+          <li><a href="mailto:hello@wanderlust.co"><i class="fa-solid fa-envelope text-accent"></i> hello@wanderlust.co</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Wanderlust Travel Co. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<a href="booking.html" class="sticky-cta btn-wl btn-wl-primary"><i class="fa-solid fa-calendar-check"></i> Book a Trip</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

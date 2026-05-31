@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tours — Wanderlust</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✈</text></svg>">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="tours">
+
+<nav class="navbar navbar-expand-lg fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">Wander<span>lust</span></a>
+    <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navMenu">
+      <ul class="navbar-nav mx-auto gap-1">
+        <li class="nav-item"><a class="nav-link" data-page="home" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="destinations" href="destinations.html">Destinations</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="tours" href="tours.html">Tours</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="gallery" href="gallery.html">Gallery</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="about" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" data-page="contact" href="contact.html">Contact</a></li>
+      </ul>
+      <div class="d-flex align-items-center gap-3 mt-3 mt-lg-0">
+        <button class="theme-toggle" aria-label="Toggle theme"><span class="icon-sun">☀</span><span class="icon-moon">☾</span></button>
+        <a href="booking.html" class="btn-wl btn-wl-primary d-none d-lg-inline-flex"><i class="fa-solid fa-calendar-check"></i> Book Now</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<section class="page-hero" style="background:linear-gradient(135deg,#0d1117,#1a2535); padding-top:9rem; padding-bottom:5rem;">
+  <div style="position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=1600&q=70') center/cover; opacity:0.2;"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <div class="breadcrumb-wl mb-4">
+      <a href="index.html">Home</a><span>/</span><span class="current">Tours</span>
+    </div>
+    <h1 class="section-title mb-3" style="color:#f0ebe3; font-size:clamp(2.5rem,6vw,4.5rem)">Curated <em>Tour</em> Packages</h1>
+    <p style="color:rgba(240,235,227,0.7); max-width:540px; font-size:1.05rem">From budget backpacking to luxury retreats — every journey designed for you.</p>
+  </div>
+</section>
+
+<!-- Filter -->
+<section class="py-4" style="background:var(--bg); border-bottom:1px solid var(--border); position:sticky; top:72px; z-index:100;">
+  <div class="container">
+    <div class="d-flex flex-wrap gap-2" data-filter-group>
+      <span style="font-size:0.8rem; font-weight:600; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.1em; margin-right:0.5rem;">Type:</span>
+      <button class="filter-pill active" data-filter="all">All Tours</button>
+      <button class="filter-pill" data-filter="adventure">Adventure</button>
+      <button class="filter-pill" data-filter="cultural">Cultural</button>
+      <button class="filter-pill" data-filter="luxury">Luxury</button>
+      <button class="filter-pill" data-filter="beach">Beach</button>
+      <button class="filter-pill" data-filter="wildlife">Wildlife</button>
+    </div>
+  </div>
+</section>
+
+<section class="section-padding" style="background:var(--bg)">
+  <div class="container">
+    <div class="row g-4">
+
+      <div class="col-md-6 col-lg-4 reveal delay-1">
+        <div class="tour-card" data-category="adventure">
+          <img src="https://images.unsplash.com/photo-1500049242364-5f500807cdd7?w=700&q=80" class="tour-img" alt="Alps">
+          <div class="tour-body">
+            <div class="tour-tags"><span class="tour-tag">Adventure</span><span class="tour-tag">Nature</span></div>
+            <h4 class="tour-name">Swiss Alps Explorer</h4>
+            <p class="dest-desc">Trek breathtaking alpine meadows, glacier walks, and charming mountain villages with expert guides.</p>
+            <div class="tour-details">
+              <div class="tour-detail-item"><i class="fa-regular fa-clock"></i> 8 Days</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-users"></i> Max 12</div>
+              <div class="tour-detail-item"><i class="fa-regular fa-calendar"></i> Year-round</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-signal"></i> Moderate</div>
+            </div>
+            <div class="tour-footer">
+              <div class="dest-price">$2,490<small>per person</small></div>
+              <a href="booking.html" class="btn-wl btn-wl-primary" style="padding:0.55rem 1.1rem;font-size:0.82rem">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-2">
+        <div class="tour-card" data-category="cultural">
+          <img src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=700&q=80" class="tour-img" alt="Japan">
+          <div class="tour-body">
+            <div class="tour-tags"><span class="tour-tag">Cultural</span><span class="tour-tag">History</span></div>
+            <h4 class="tour-name">Japan Cultural Journey</h4>
+            <p class="dest-desc">From Tokyo's neon lights to Kyoto's ancient temples — experience Japan's full cultural tapestry.</p>
+            <div class="tour-details">
+              <div class="tour-detail-item"><i class="fa-regular fa-clock"></i> 12 Days</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-users"></i> Max 16</div>
+              <div class="tour-detail-item"><i class="fa-regular fa-calendar"></i> Mar–Nov</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-signal"></i> Easy</div>
+            </div>
+            <div class="tour-footer">
+              <div class="dest-price">$3,890<small>per person</small></div>
+              <a href="booking.html" class="btn-wl btn-wl-primary" style="padding:0.55rem 1.1rem;font-size:0.82rem">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-3">
+        <div class="tour-card" data-category="luxury beach">
+          <img src="https://images.unsplash.com/photo-1504214208698-ea1916a2195a?w=700&q=80" class="tour-img" alt="Maldives">
+          <div class="tour-body">
+            <div class="tour-tags"><span class="tour-tag">Luxury</span><span class="tour-tag">Beach</span></div>
+            <h4 class="tour-name">Maldives Escape</h4>
+            <p class="dest-desc">Overwater bungalows, crystal lagoons, sunset cruises, and world-class diving in paradise.</p>
+            <div class="tour-details">
+              <div class="tour-detail-item"><i class="fa-regular fa-clock"></i> 7 Days</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-users"></i> Max 8</div>
+              <div class="tour-detail-item"><i class="fa-regular fa-calendar"></i> Nov–Apr</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-signal"></i> Easy</div>
+            </div>
+            <div class="tour-footer">
+              <div class="dest-price">$4,200<small>per person</small></div>
+              <a href="booking.html" class="btn-wl btn-wl-primary" style="padding:0.55rem 1.1rem;font-size:0.82rem">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-1">
+        <div class="tour-card" data-category="wildlife">
+          <img src="https://images.unsplash.com/photo-1516026672322-bc52d61a55d5?w=700&q=80" class="tour-img" alt="Safari">
+          <div class="tour-body">
+            <div class="tour-tags"><span class="tour-tag">Wildlife</span><span class="tour-tag">Adventure</span></div>
+            <h4 class="tour-name">Kenya Safari Classic</h4>
+            <p class="dest-desc">Witness the spectacular Great Migration across the Maasai Mara in luxurious tented camps.</p>
+            <div class="tour-details">
+              <div class="tour-detail-item"><i class="fa-regular fa-clock"></i> 10 Days</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-users"></i> Max 10</div>
+              <div class="tour-detail-item"><i class="fa-regular fa-calendar"></i> Jul–Oct</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-signal"></i> Easy</div>
+            </div>
+            <div class="tour-footer">
+              <div class="dest-price">$5,100<small>per person</small></div>
+              <a href="booking.html" class="btn-wl btn-wl-primary" style="padding:0.55rem 1.1rem;font-size:0.82rem">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-2">
+        <div class="tour-card" data-category="adventure">
+          <img src="https://images.unsplash.com/photo-1501854140801-50d01698950b?w=700&q=80" class="tour-img" alt="Patagonia">
+          <div class="tour-body">
+            <div class="tour-tags"><span class="tour-tag">Adventure</span><span class="tour-tag">Nature</span></div>
+            <h4 class="tour-name">Patagonia Trek</h4>
+            <p class="dest-desc">Conquer the W-Trek in Torres del Paine amid glaciers, condors, and raw wilderness.</p>
+            <div class="tour-details">
+              <div class="tour-detail-item"><i class="fa-regular fa-clock"></i> 14 Days</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-users"></i> Max 10</div>
+              <div class="tour-detail-item"><i class="fa-regular fa-calendar"></i> Nov–Mar</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-signal"></i> Challenging</div>
+            </div>
+            <div class="tour-footer">
+              <div class="dest-price">$3,600<small>per person</small></div>
+              <a href="booking.html" class="btn-wl btn-wl-primary" style="padding:0.55rem 1.1rem;font-size:0.82rem">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-6 col-lg-4 reveal delay-3">
+        <div class="tour-card" data-category="luxury cultural">
+          <img src="https://images.unsplash.com/photo-1548013146-72479768bada?w=700&q=80" class="tour-img" alt="Rajasthan">
+          <div class="tour-body">
+            <div class="tour-tags"><span class="tour-tag">Luxury</span><span class="tour-tag">Cultural</span></div>
+            <h4 class="tour-name">Royal Rajasthan</h4>
+            <p class="dest-desc">Palace hotels, camel safaris, vibrant bazaars, and the majestic forts of India's royal desert state.</p>
+            <div class="tour-details">
+              <div class="tour-detail-item"><i class="fa-regular fa-clock"></i> 9 Days</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-users"></i> Max 14</div>
+              <div class="tour-detail-item"><i class="fa-regular fa-calendar"></i> Oct–Mar</div>
+              <div class="tour-detail-item"><i class="fa-solid fa-signal"></i> Easy</div>
+            </div>
+            <div class="tour-footer">
+              <div class="dest-price">$2,800<small>per person</small></div>
+              <a href="booking.html" class="btn-wl btn-wl-primary" style="padding:0.55rem 1.1rem;font-size:0.82rem">Book</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="section-padding newsletter-section">
+  <div class="container">
+    <div class="row justify-content-center text-center reveal">
+      <div class="col-lg-7">
+        <div class="section-label mb-3" style="color:var(--accent)">Custom Tours</div>
+        <h2 class="section-title mb-3" style="color:#f0ebe3">Can't Find What You <em>Need?</em></h2>
+        <p style="color:rgba(240,235,227,0.65); margin-bottom:2rem">We build fully bespoke itineraries tailored to your dates, budget, and dream destinations.</p>
+        <a href="contact.html" class="btn-wl btn-wl-primary"><i class="fa-solid fa-pen-to-square"></i> Request Custom Tour</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-4">
+        <div class="footer-brand mb-3">Wander<span>lust</span></div>
+        <p class="footer-desc">Crafting extraordinary journeys for curious souls since 2010.</p>
+        <div class="social-links mt-4">
+          <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-title">Explore</div>
+        <ul class="footer-links">
+          <li><a href="destinations.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Destinations</a></li>
+          <li><a href="tours.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Tours</a></li>
+          <li><a href="booking.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Book a Trip</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-lg-2">
+        <div class="footer-title">Company</div>
+        <ul class="footer-links">
+          <li><a href="about.html"><i class="fa-solid fa-chevron-right fa-xs"></i> About Us</a></li>
+          <li><a href="contact.html"><i class="fa-solid fa-chevron-right fa-xs"></i> Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-4">
+        <div class="footer-title">Contact</div>
+        <ul class="footer-links">
+          <li><a href="#"><i class="fa-solid fa-location-dot text-accent"></i> 42 Explorer Lane, NY 10001</a></li>
+          <li><a href="tel:+1234567890"><i class="fa-solid fa-phone text-accent"></i> +1 (234) 567-890</a></li>
+          <li><a href="mailto:hello@wanderlust.co"><i class="fa-solid fa-envelope text-accent"></i> hello@wanderlust.co</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom"><p>© 2026 Wanderlust Travel Co. All rights reserved.</p></div>
+  </div>
+</footer>
+
+<a href="booking.html" class="sticky-cta btn-wl btn-wl-primary"><i class="fa-solid fa-calendar-check"></i> Book a Trip</a>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
