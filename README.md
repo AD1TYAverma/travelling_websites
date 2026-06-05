@@ -1,4 +1,4 @@
-# 🌍 Wanderlust - Travel & Tourism Website
+# Wanderlust - Travel & Tourism Website
 
 A modern, responsive, and visually appealing Travel & Tourism Website built using HTML5, CSS3, Bootstrap 5, and JavaScript.
 
@@ -6,7 +6,7 @@ Wanderlust helps users discover destinations, explore travel packages, browse ga
 
 ---
 
-## ✨ Features
+## Features
 
 - Modern Premium UI/UX
 - Fully Responsive Design
@@ -27,48 +27,48 @@ Wanderlust helps users discover destinations, explore travel packages, browse ga
 
 ---
 
-## 📸 Pages Included
+##  Pages Included
 
-### 🏠 Home Page
+### Home Page
 - Hero Banner
 - Featured Destinations
 - Popular Tours
 - Testimonials
 - Newsletter Section
 
-### ℹ️ About Page
+###  About Page
 - Company Overview
 - Mission & Vision
 - Why Choose Us
 
-### 🌎 Destinations Page
+###  Destinations Page
 - Popular Travel Destinations
 - Destination Information
 - Interactive Cards
 
-### 🎒 Tours Page
+### Tours Page
 - Tour Packages
 - Pricing Information
 - Package Details
 
-### 🖼 Gallery Page
+###  Gallery Page
 - Travel Photo Gallery
 - Hover Effects
 - Responsive Layout
 
-### 📅 Booking Page
+###  Booking Page
 - Travel Booking Form
 - Destination Selection
 - Passenger Details
 
-### 📞 Contact Page
+### Contact Page
 - Contact Form
 - Office Information
 - Google Map Section
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - HTML5
 - CSS3
@@ -103,7 +103,7 @@ travell/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Clone Repository
 
@@ -125,7 +125,7 @@ No installation required.
 
 ---
 
-## 💡 Key Functionalities
+## Key Functionalities
 
 ### Dark Mode
 
@@ -148,7 +148,7 @@ No installation required.
 
 ---
 
-## 🎯 Future Enhancements
+##  Future Enhancements
 
 - User Authentication
 - Payment Gateway Integration
@@ -161,7 +161,7 @@ No installation required.
 
 ---
 
-## 📱 Responsive Support
+##  Responsive Support
 
 ✔ Mobile  
 ✔ Tablet  
@@ -190,7 +190,7 @@ Add screenshot here
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions, issues, and feature requests are welcome.
 
@@ -198,13 +198,13 @@ Feel free to fork the repository and submit a pull request.
 
 ---
 
-## 📄 License
+##  License
 
 This project is open-source and available under the MIT License.
 
 ---
 
-## 👨‍💻 Developer
+##  Developer
 
 **Aditya Verma**
 
