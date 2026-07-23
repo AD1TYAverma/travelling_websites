@@ -206,7 +206,7 @@ This project is open-source and available under the MIT License.
 
 ##  Developer
 
-**Aditya Verma**
+**Aditya Verma.**
 
 PHP & Laravel Developer
 
